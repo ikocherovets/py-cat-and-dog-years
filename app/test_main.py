@@ -22,5 +22,5 @@ TEST_CASES = [
     [case[:3] for case in TEST_CASES],
     ids=[case[3] for case in TEST_CASES],
 )
-def test_get_human_age(cat_age, dog_age, expected):
+def test_get_human_age(cat_age: int, dog_age: int, expected: list) -> None:
     assert get_human_age(cat_age, dog_age) == expected
