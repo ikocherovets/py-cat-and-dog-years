@@ -18,6 +18,15 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
         get_human_age(15, 15) == [1, 1]
         get_human_age(24, 24) == [2, 2]
     """
-    # TODO: Implement this function
-    # Write your tests first, then implement the logic
-    return [0, 0]
+    return [
+        convert_to_human(cat_age, 4),
+        convert_to_human(dog_age, 5),
+    ]
+
+
+def convert_to_human(animal_age: int, each_year: int) -> int:
+    if animal_age < 15:
+        return 0
+    if animal_age < 24:
+        return 1
+    return 2 + (animal_age - 24) // each_year
